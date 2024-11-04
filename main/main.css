@@ -5,7 +5,10 @@
     margin: 0;
     font-family: Nunito Sans, 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
-
+a {
+    text-decoration: none;
+    color: white;
+}
 header {
     display: flex;
     justify-content: center;
@@ -46,7 +49,7 @@ header {
     width: 100vw;
     height: 91vh;
     opacity: 0.6;
-    background-color: #090909;
+    background-color: #0e0d0d;
     z-index: 1;
 }
 #projects {
@@ -101,10 +104,45 @@ video {
 }
 #projects {
     width: 100vw;
-    height: 100vh;
-    background: linear-gradient(to right, rgb(64, 5, 119), rgb(122, 10, 226))
+    height: 100vh; /*
+    background: linear-gradient(to right, rgb(64, 5, 119), rgb(122, 10, 226)) */
+    background: linear-gradient(to right, #471AA5, #2E4EBE, #3158e4);
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
 }
-
+#works {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 100vw;
+    min-height: 65%;
+}
+#auto {
+    background-image: url(../pictures/nocar.jpg);
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-color: white;
+}
+.work {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    min-width: 20%;
+    min-height: 90%;
+    border: 0.0625rem solid white;
+    border-radius: 2rem;
+    transition: width 2s, height 2s;
+    transition-timing-function: linear;
+}
+.work:hover {
+    width: 21%;
+    height: 98%;
+}
 footer {
     display: flex;
     flex-direction: column;
@@ -113,5 +151,5 @@ footer {
     background-color: #090909;
     height: 18vh;
     width: 100vw;
-    color: rgb(195, 152, 235);
+    color: #5478fa;
 }
