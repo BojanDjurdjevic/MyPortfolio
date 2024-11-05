@@ -1,5 +1,23 @@
 @import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&display=swap');
 
+@keyframes descIn {
+    from {
+        transform: scale(0, 0);
+    }
+    to {
+        transform: scale(1, 1);
+    }
+}
+@keyframes descOut {
+    from {
+       transform: scale(1, 1); 
+    }
+    to {
+        transform: scale(0, 0);
+        
+    }
+}
+
 * {
     box-sizing: border-box;
     margin: 0;
@@ -8,6 +26,11 @@
 a {
     text-decoration: none;
     color: white;
+}
+i {
+    cursor: pointer;
+    width: 2rem;
+    height: 2rem;
 }
 header {
     display: flex;
@@ -103,9 +126,12 @@ video {
 }
 #projects {
     width: 100vw;
-    height: 100vh; /*
-    background: linear-gradient(to right, rgb(64, 5, 119), rgb(122, 10, 226)) */
-    background: linear-gradient(to right, #471AA5, #2E4EBE, #3158e4);
+    height: 100vh; /* 
+    background: radial-gradient(#3158e4 , #2E4EBE,  #471AA5);
+    background: linear-gradient(to right, rgb(64, 5, 119), rgb(122, 10, 226));
+    */
+    background: linear-gradient(to right, #034E60, #06CCC4);
+    
     color: white;
     display: flex;
     flex-direction: column;
@@ -117,7 +143,7 @@ video {
     justify-content: space-evenly;
     align-items: center;
     width: 100vw;
-    min-height: 65%;
+    min-height: 70%;
 }
 #auto {
     background-image: url(../pictures/nocar.jpg);
@@ -126,6 +152,9 @@ video {
     background-repeat: no-repeat;
     background-color: white;
 }
+#auto_desc {
+    display: none;
+}
 #todo {
     background-image: url(../pictures/toDo2.jpg);
     background-position: center;
@@ -133,12 +162,18 @@ video {
     background-repeat: no-repeat;
     background-color: white;
 }
+#todo_desc {
+    display: none;
+}
 #phone {
     background-image: url(../pictures/phonebook.png);
     background-position: center;
     background-size: contain;
     background-repeat: no-repeat;
     background-color: white;
+}
+#phone_desc {
+    display: none;
 }
 .work {
     display: flex;
@@ -158,7 +193,10 @@ video {
     height: 99%;
 }
 #autohead {
-    background: linear-gradient(to right, #471AA5, #2E4EBE, #2E4EBE, #3158e4);
+    /*background: linear-gradient(to right, #471AA5, #2E4EBE, #3158e4);
+    background: linear-gradient(to right, #009775, #06CCC4,  #034E60);
+    */
+    background-color: #04aaa4; 
     color: white;
     width: 100%;
     height: 15%;
@@ -180,12 +218,17 @@ video {
     font-size: 2.6rem;
 }
 .actions button {
-    background-color: #0050c0d9;
+    /*background-color: #28b91b; /* 0050c0d9
+    background: radial-gradient(#3158e4 , #2E4EBE,  #471AA5);
+    background: linear-gradient(to right, #009775, #06CCC4,  #034E60);
+    */
+    background-color: #04aaa4;
     color: white;
-    padding: 0.4rem;
+    padding: 0.5rem;
     border: none;
     border-radius: 0.3rem;
     margin: 0.3rem;
+    cursor: pointer;
 }
 .tools {
     display: flex;
@@ -217,12 +260,49 @@ video {
     width: 6rem;
     height: 3rem;
 }
+.description {
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    width: 50%;
+    height: 90%;
+    /*background-color: #777adf; */
+    background-color: #04aaa4;
+    border-radius: 3rem;
+    padding: 3rem;
+    box-shadow: 1rem 12rem 6rem -10rem #090909;
+}
+.description div {
+    max-height: 10%;
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+}
+.description p {
+    height: 90%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+}
+.visible {
+    animation: descIn;
+    animation-duration: 0.5s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+}
+.invisible {
+    animation: descOut;
+    animation-duration: 0.5s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+}
 footer {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: space-evenly;
-    background-color: #090909;
+    background-color: #09272e;
     height: 18vh;
     width: 100vw;
     color: white;
