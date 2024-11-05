@@ -127,12 +127,26 @@ video {
     background-repeat: no-repeat;
     background-color: white;
 }
+#todo {
+    background-image: url(../pictures/toDo2.jpg);
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-color: white;
+}
+#phone {
+    background-image: url(../pictures/phonebook.png);
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-color: white;
+}
 .work {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
-    min-width: 20%;
+    min-width: 18%;
     min-height: 90%;
     border: 0.0625rem solid white;
     border-radius: 2rem;
@@ -145,8 +159,8 @@ video {
     height: 98%;
 }
 #autohead {
-    background-color: #090909;
-    color: rgb(203, 7, 7);
+    background: linear-gradient(to right, #471AA5, #2E4EBE, #3158e4);
+    color: white;
     width: 100%;
     height: 15%;
     display: flex;
@@ -161,14 +175,15 @@ video {
     align-items: center;
     width: 100%;
     min-height: 30%;
-    background-color: #090909;
+    background-color: white;
+    color: #090909;
     padding: 0.6rem;
     font-size: 2.6rem;
 }
 .actions button {
-    background-color: rgb(203, 7, 7);
+    background-color: #0050c0d9;
     color: white;
-    padding: 0.3rem;
+    padding: 0.4rem;
     border: none;
     border-radius: 0.3rem;
     margin: 0.3rem;
@@ -195,6 +210,14 @@ video {
     width: 6rem;
     height: 3rem;
 }
+.ts {
+    background-image: url(../pictures/typescript.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    width: 6rem;
+    height: 3rem;
+}
 footer {
     display: flex;
     flex-direction: column;
@@ -203,5 +226,5 @@ footer {
     background-color: #090909;
     height: 18vh;
     width: 100vw;
-    color: #5478fa;
+    color: white;
 }
