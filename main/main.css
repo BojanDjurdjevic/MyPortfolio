@@ -307,3 +307,43 @@ footer {
     width: 100vw;
     color: white;
 }
+
+/*-------------------------MEDIA-----------------------*/
+@media screen and (max-width: 999px) {
+    @keyframes descIn {
+        from {
+            transform: scale(0, 0);
+        }
+        to {
+            transform: scale(1, 1);
+        }
+    }
+    @keyframes descOut {
+        from {
+           transform: scale(1, 1); 
+        }
+        to {
+            transform: scale(0, 0);
+            
+        }
+    }
+    #projects {
+        height: 120vh;
+    }
+    #works {
+        flex-direction: column;
+        justify-content: space-between;
+    }
+    #auto, #todo, #phone {
+        width: 90%;
+        height: 25%;
+    }
+    .work {
+        width: 90%;
+        height: 25%;
+    }
+    .description {
+        width: 93%;
+        height: 80%;
+    }
+}
